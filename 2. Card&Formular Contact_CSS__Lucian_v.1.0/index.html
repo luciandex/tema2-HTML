@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tema nr. 2 Web dev. CREDIS">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Ionescu Lucian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card&Form Contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<h3>Tema nr. 2 - HTML și CSS</h3>
+<div id="mini-menu">
+    <a href="#businesscard">Carte de vizită</a>
+    <br>
+    <a href="#contactform">Formular de contact</a>
+</div>
+
+<h5>Carte de vizită</h5>
+<div class="back">
+    <div id="businesscard" itemscope itemtype="http://schema.org/Organization">
+        <img itemprop="logo"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu-iQZpslfRYvS24KXNWRHpz80gR-bA2yuAwRVMiwaPoVPT4-E&amps"
+             width="75" height="55" content="Our Company" alt="Our Company"/>
+        <div id="stg" itemprop="name"><strong>Dezvoltare Web S.R.L</strong></div>
+        <div id="name-position">
+            <strong itemprop="workFor">Marius Constantinescu</strong>
+            <br>
+            <em itemprop="jobTitle">General manager</em>
+        </div>
+        <ul id="contact-data">
+            <li>&#9743;&nbsp;<a itemprop="telephone" href="tel:+40789012345">+4 0789 012 345</a>
+            </li>
+            <li>&#9993;&nbsp;<a itemprop="email" href="mailto:marius.constantinescu@webdev.ro">marius.constantinescu@dezwebsrl.ro</a>
+            </li>
+            <li>&#127760;&nbsp;<a itemprop="url" href="https://www.dezvoltarewebsrl.ro/">www.dezvoltarewebsrl.ro</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div itemscope id="contactform">
+    <h5><strong>Formular de contact</strong></h5>
+    <p>Pentru a intra în legătură cu noi, vă rugăm să completați formularul de mai jos. <br>
+        Câmpurile marcate cu * sunt obligatorii.</p>
+    <form class="contact-form">
+        <fieldset>
+            <legend>Contactează-ne</legend>
+            <p>Nume*:
+                <input required type="text" size="40" placeholder=" Introduceți numele" maxlength="30" minlength="3">
+            </p>
+            <p>Email* &#9993;&nbsp;:
+                <input required type="email" size="40" placeholder=" example@email.com"
+                       name="email"></p>
+            <p>Site web &#127760;&nbsp;:
+                <input type="url" size="40" placeholder=" www.website.com"></p>
+            <p>Telefon &#9743;&nbsp;:
+                <input type="tel" size="38" placeholder=" Număr telefon începând cu prefixul +40"
+                       pattern="[+]{1}[4]{1}[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}" name="phonenumber"></p>
+            <p>Subiect:
+                <input type="text" size="38" placeholder=" Introduceți un subiect" minlength="7" name="subject">
+            </p>
+            <p>Mesaj* &#9779; :
+                <br>
+                <textarea required spellcheck="true" minlength="20"
+                          placeholder=" Introduceți mesajul dumneavoastră aici" name="message"></textarea></p>
+            <p>Încarcă document suplimentar: <input type="file" name="upload file"></p>
+            <p>Sunt de acord cu prelucrarea datelor cu caracter personal:
+                <input type="checkbox" value="da">Da <input type="checkbox" value="nu">Nu</p>
+            <p><input type="submit" value="Trimite mesajul"> &ensp; <input type="reset"
+                                                                           value="Șterge completările"></p>
+            <p>Vă mulțumim pentru interesul acordat serviciilor noastre. &nbsp; &#128578;</p>
+            <p><a href="#">Întoarcere la începutul paginii</a></p>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML5</title>
+    <style>
+        html {
+            background: #D9D9D9;
+        }
+
+        #page {
+            width: 1024px;
+            margin: 10px auto 0;
+            background-color: #FFF;
+            padding: 25px 15px;
+        }
+
+        #page > header > nav > ul {
+            list-style: none;
+            margin: 0 10px;
+            padding: 5px;
+            border: 1px solid;
+            border-left: 0;
+            border-right: 0;
+        }
+
+        #menu > ul li {
+            display: inline-block;
+            padding: 5px;
+            margin: 15px 0;
+        }
+
+        #menu a:hover {
+            color: red;
+        }
+
+        #logo {
+            font: 2em "Times New Roman", Times, serif;
+            margin: 15px;
+            padding: 5px;
+        }
+
+        #logo::first-letter {
+            color: red;
+            font-size: 1.5em;
+        }
+
+        #logo a:hover {
+            color: #0F0;
+        }
+
+        h1 {
+            font-size: 1.3em;
+            margin-bottom: 0.5em;
+        }
+
+        aside h3 {
+            text-indent: 20px;
+        }
+
+        #content {
+            float: left;
+            width: 70%;
+            padding: 2%;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+
+        #content > section {
+            border-top: 2px dashed #ccc;
+            border-bottom: 2px dashed #ccc;
+            margin: 1em 0;
+        }
+
+        #content p {
+            text-indent: 2em;
+            text-align: justify;
+        }
+        #content ul{
+            list-style: circle inside;
+        }
+
+        img {
+            padding: 0.2em;
+            margin: 0.5em;
+            border: 2px solid #ccc;
+        }
+
+        #metadata {
+            font-size: 1.1em;
+        }
+        .inline-separated-list,
+        .inline-separated-list li,
+        .inline-separated-list li:after {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            content: ", ";
+        }
+
+        footer ul {
+            list-style:none;
+            padding:0;
+        }
+
+        #sidebar {
+            width: 26%;
+            padding: 2%;
+            float: right;
+        }
+
+        #sidebar ul {
+            margin: 0.5em 0;
+            padding: 0;
+            list-style: square inside;
+        }
+
+        a,
+        a:visited {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #page > footer > section {
+            float: right;
+            width: 48%;
+            box-sizing: border-box;
+            padding: 1%;
+            margin: 1%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <section id="page">
+        <header>
+            <div id="logo">
+                <a href="/">MOne</a>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="main">
+            <article id="content" itemscope itemtype="https://schema.org/Article">
+                <header>
+                    <h1 itemprop="name">
+                        <span itemprop="headline">Article title</span>
+                    </h1>
+
+                    <div id="metadata">
+                        <span>by: <span><strong itemprop="author" itemscope itemtype="https://schema.org/Person"><span
+                                itemprop="name">First Last</span></strong></span></span> |
+                        <span>category: <em>Category</em></span> |
+                        <span>date: <u itemprop="datePublished" content="2019-01-28">28 Jan '19</u></span>
+                    </div>
+                </header>
+                <section>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>In et mi vel enim luctus aliquam
+                        eu in nisi. Donec bibendum neque nulla, at aliquet mauris volutpat a. Morbi egestas a arcu eget
+                        feugiat. Suspendisse potenti. Nulla semper et metus a eleifend. Sed venenatis lorem at fermentum
+                        tincidunt. Integer quis nisl porttitor, posuere nibh et, euismod neque.
+                    </p>
+                    <ul>
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ul>
+                    <img itemprop="image" src="/" alt="Lorem ipsum image" title="Lorem image Ipsum" width="200"
+                         height="200" align="right"/>
+                    <p>
+                        Nunc vitae lacinia turpis, vel facilisis urna. Aliquam porta lorem lectus, in venenatis erat
+                        tempor quis. Donec orci lectus, maximus non scelerisque et, faucibus a magna. Nulla posuere
+                        venenatis est, sed euismod massa egestas a. Donec pellentesque semper eros ut blandit. Etiam
+                        commodo mollis nibh, a dignissim lacus efficitur vel. Vivamus sed arcu sed ipsum imperdiet
+                        tincidunt. Sed pellentesque purus id ipsum accumsan mollis. Donec mi nulla, porttitor et ex
+                        posuere, malesuada eleifend nulla. Nulla finibus magna et metus viverra gravida. Maecenas quis
+                        nulla malesuada, accumsan nunc sed, blandit nulla.
+                    </p>
+                    <br style="clear:both"/>
+                </section>
+                <footer>
+                    <section>
+                        <strong>Tags</strong>:
+                        <ul class="inline-separated-list">
+                            <li>
+                                recent news
+                            </li>
+                            <li>
+                                article
+                            </li>
+                            <li>
+                                my opinion
+                            </li>
+                        </ul>
+                    </section>
+                </footer>
+            </article>
+            <aside id="sidebar">
+                <section>
+                    <h3>Recent Articles</h3>
+                    <ul>
+                        <li><a href="#">First article</a></li>
+                        <li><a href="#">Second article</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Category one</a></li>
+                        <li><a href="#">Category two</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </section>
+        <footer>
+            <section>
+                <h3>About</h3>
+                <p>Donec pellentesque semper eros ut blandit. Etiam commodo mollis nibh, a dignissim lacus efficitur
+                    vel. Vivamus sed arcu sed ipsum imperdiet tincidunt. Sed pellentesque purus id ipsum accumsan
+                    mollis. </p>
+            </section>
+            <section>
+                <h3>Helpful links</h3>
+                <ul>
+                    <li>
+                        <a href="#">Terms and Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+        <br style="clear:both">
+    </section>
+</div>
+</body>
+</html>
